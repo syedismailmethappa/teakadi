@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kōcha &amp; Co. — Modern Tea House &amp; Matcha Bar</title>
+<meta name="description" content="Kōcha &amp; Co. is a modern tea house and matcha bar. Stone-milled matcha, high-mountain oolong, hand-shaken boba and house-baked tea pastries." />
+<meta name="theme-color" content="#04120d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Outfit:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="cg-backdrop" aria-hidden="true">
+  <span class="cg-blob cg-blob--jade"></span>
+  <span class="cg-blob cg-blob--matcha"></span>
+  <span class="cg-blob cg-blob--gold"></span>
+</div>
+<div class="cg-grain" aria-hidden="true"></div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">茶</span>
+      <span class="brand__text">
+        Kōcha &amp; Co.
+        <small>Tea House · Est. 2019</small>
+      </span>
+    </a>
+
+    <nav id="primary-nav" class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">Our Craft</a>
+      <a href="contact.html">Visit</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--ghost btn--small" href="menu.html">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Order
+      </a>
+      <button class="cart-btn" type="button" data-cart-open aria-label="Open your tea tray">
+        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+        <span>Tray</span>
+        <span class="cart-btn__count" data-cart-count data-empty="true">0</span>
+      </button>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero shell" id="hero-section">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Small-lot tea · Stone-milled matcha</p>
+        <h1 class="hero__title">
+          Brewed slow.<br />
+          Poured <em>bright.</em>
+        </h1>
+        <p class="lede">
+          A modern tea house for people who taste the difference. We source single-estate
+          leaves, mill our own matcha and whisk every bowl to order — then dress it all up
+          in something you'll want to photograph.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="menu.html">
+            <i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Explore the menu
+          </a>
+          <a class="btn btn--ghost" href="#craft">
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i> How we brew
+          </a>
+        </div>
+
+        <dl class="hero__stats">
+          <div>
+            <dt class="stat__label">Single-estate teas</dt>
+            <dd class="stat__value" data-count="24">0</dd>
+          </div>
+          <div>
+            <dt class="stat__label">Bowls whisked daily</dt>
+            <dd class="stat__value" data-count="1200">0</dd>
+          </div>
+          <div>
+            <dt class="stat__label">Guest rating</dt>
+            <dd class="stat__value">4.9<span aria-hidden="true"> ★</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__frame">
+          <img src="https://sspark.genspark.ai/i/vwiDpFs1geqIC7nN?width=1600"
+               alt="Iced matcha latte in a tall glass with creamy milk swirls" width="1600" height="2000" />
+          <div class="hero__badge">
+            <div>
+              <strong>Uji Ceremonial Matcha</strong>
+              <span>Harvested · Spring 2026</span>
+            </div>
+            <i class="fa-solid fa-star" aria-hidden="true" style="color:var(--gold-300)"></i>
+          </div>
+        </div>
+
+        <span class="float-chip float-chip--one">
+          <i class="fa-solid fa-mortar-pestle" aria-hidden="true"></i> Milled to order
+        </span>
+        <span class="float-chip float-chip--two">
+          <i class="fa-solid fa-temperature-half" aria-hidden="true"></i> 78°C water
+        </span>
+        <span class="float-chip float-chip--three">
+          <i class="fa-solid fa-leaf" aria-hidden="true"></i> Zero additives
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== MARQUEE =========================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Uji matcha</span><span>Ali Shan oolong</span><span>Cold-brew sencha</span>
+      <span>Hand-rolled boba</span><span>Brown sugar</span><span>Yuzu peel</span>
+      <span>Uji matcha</span><span>Ali Shan oolong</span><span>Cold-brew sencha</span>
+      <span>Hand-rolled boba</span><span>Brown sugar</span><span>Yuzu peel</span>
+    </div>
+  </div>
+
+  <!-- ========================== FEATURED =========================== -->
+  <section class="section shell" id="featured-section">
+    <div class="section-head reveal">
+      <p class="eyebrow">Guest favourites</p>
+      <h2>The pours people come back for</h2>
+      <p>
+        Six house signatures, pulled straight from today's menu board. Tap add and we'll
+        keep a tray waiting for you at the counter.
+      </p>
+    </div>
+
+    <div class="card-grid" id="featured-grid" style="margin-top:2.4rem">
+      <!-- filled from the menu_items table -->
+    </div>
+
+    <p style="margin-top:2rem">
+      <a class="btn btn--ghost" href="menu.html">
+        See all 22 items <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </p>
+  </section>
+
+  <!-- ============================ CRAFT ============================ -->
+  <section class="section shell" id="craft">
+    <div class="split">
+      <div class="media-stack reveal">
+        <img src="https://sspark.genspark.ai/i/OhPL7ltGUGfXfsZD?width=1400"
+             alt="Hot water poured from a pitcher into a ceramic teacup on a tray"
+             loading="lazy" width="1200" height="960" />
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow">Our craft</p>
+        <h2 style="font-size:clamp(1.9rem,4.6vw,3rem);margin:.7rem 0 1rem">
+          Tea treated like produce, not product
+        </h2>
+        <p class="lede">
+          Leaves are picked in narrow windows, rested, and cupped in-house before a single
+          gram makes it onto the board. What doesn't sing doesn't ship.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+            <div>
+              <h3>Single-estate sourcing</h3>
+              <p>Direct from 9 small farms across Uji, Nantou and Yunnan — traceable to the row.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></span>
+            <div>
+              <h3>Timed, never guessed</h3>
+              <p>Every leaf has its own temperature and steep curve dialled in by our tea lead.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-recycle" aria-hidden="true"></i></span>
+            <div>
+              <h3>Low-waste kitchen</h3>
+              <p>Spent leaves become our pastries' flavouring; cups are returnable for a discount.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ STEPS ============================ -->
+  <section class="section shell section--tight">
+    <div class="section-head reveal">
+      <p class="eyebrow">From leaf to cup</p>
+      <h2>Four steps, zero shortcuts</h2>
+    </div>
+
+    <div class="steps" style="margin-top:2.2rem">
+      <div class="step reveal">
+        <h3>Shade &amp; pick</h3>
+        <p>Matcha fields are shaded for 20 days to build theanine and that deep jade colour.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Stone mill</h3>
+        <p>Granite wheels turn at 30 rpm, yielding just 40g of powder per hour. Slow on purpose.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Whisk</h3>
+        <p>A bamboo chasen lifts the powder into a fine foam — never a blender, never a shortcut.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Pour</h3>
+        <p>Served at 78°C over milk, ice or nothing at all, depending on your mood.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ QUOTE ============================ -->
+  <section class="section shell section--tight">
+    <div class="quote-band glass reveal">
+      <blockquote>
+        “The matcha lemonade is absurdly good — and the room smells like a warm field.”
+      </blockquote>
+      <cite>— Weekly Brew Review</cite>
+    </div>
+  </section>
+
+  <!-- ============================= CTA ============================== -->
+  <section class="section shell section--tight">
+    <div class="cta-band reveal">
+      <p class="eyebrow" style="justify-content:center">Reserve a tasting flight</p>
+      <h2>Six teas. One hour. Zero rush.</h2>
+      <p>
+        Our guided tasting flight walks you through a green, an oolong, a white, a roasted,
+        a pressed cake and a bowl of ceremonial matcha. Saturdays at 11am and 4pm.
+      </p>
+      <a class="btn btn--primary" href="contact.html">
+        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book a seat
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">茶</span>
+          <span class="brand__text">Kōcha &amp; Co.<small>Tea House · Est. 2019</small></span>
+        </a>
+        <p>
+          A modern tea house in the old rope district. Small-lot leaves, stone-milled matcha
+          and a pastry case that changes with the harvest.
+        </p>
+        <div class="socials">
+          <a href="#hero-section" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#hero-section" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#hero-section" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+          <a href="#hero-section" aria-label="Newsletter"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full menu</a></li>
+          <li><a href="about.html">Our craft</a></li>
+          <li><a href="contact.html">Visit us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="menu.html#Signature%20Lattes">Signature lattes</a></li>
+          <li><a href="menu.html#Milk%20Teas">Milk teas</a></li>
+          <li><a href="menu.html#Pure%20Teas">Pure teas</a></li>
+          <li><a href="menu.html#Bakery%20%26%20Bites">Bakery &amp; bites</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li>14 Rope Walk Lane</li>
+          <li>Open daily · 8am – 8pm</li>
+          <li><a href="tel:+15550142200">+1 (555) 014-2200</a></li>
+          <li><a href="mailto:hello@kocha.co">hello@kocha.co</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Kōcha &amp; Co. All rights reserved.</span>
+      <span>Brewed with care · Prices include service</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= TRAY ============================== -->
+<div class="drawer-scrim" id="drawer-scrim" data-cart-close></div>
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Your tea tray" aria-hidden="true">
+  <div class="drawer__head">
+    <h2>Your tray</h2>
+    <button class="icon-btn" type="button" data-cart-close aria-label="Close tray">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="drawer__body" id="cart-lines"></div>
+
+  <div class="drawer__foot">
+    <div class="totals">
+      <div><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div><span>Service &amp; tax</span><span id="cart-tax">$0.00</span></div>
+      <div class="totals__grand"><span>Total</span><span id="cart-total">$0.00</span></div>
+    </div>
+    <button class="btn btn--primary btn--block" type="button" id="cart-checkout" disabled>
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Confirm tray
+    </button>
+    <p class="field-hint" style="text-align:center">
+      Orders are collected here and confirmed at the counter.
+    </p>
+  </div>
+</aside>
+
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+[
+  {
+    "name": "menu_items",
+    "fields": [
+      {
+        "name": "id",
+        "type": "text"
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "description": "Display name of the drink or pastry"
+      },
+      {
+        "name": "category",
+        "type": "text",
+        "description": "Menu section",
+        "options": [
+          "Signature Lattes",
+          "Milk Teas",
+          "Pure Teas",
+          "Iced & Sparkling",
+          "Bakery & Bites",
+          "Extras"
+        ]
+      },
+      {
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "price",
+        "type": "number",
+        "description": "Price in USD"
+      },
+      {
+        "name": "image_url",
+        "type": "text"
+      },
+      {
+        "name": "tags",
+        "type": "array",
+        "description": "Dietary / flavour tags"
+      },
+      {
+        "name": "caffeine",
+        "type": "text",
+        "options": [
+          "None",
+          "Low",
+          "Medium",
+          "High"
+        ]
+      },
+      {
+        "name": "rating",
+        "type": "number",
+        "description": "0-5 star average"
+      },
+      {
+        "name": "badge",
+        "type": "text",
+        "description": "Optional promotional badge"
+      },
+      {
+        "name": "featured",
+        "type": "bool",
+        "description": "Show on homepage"
+      }
+    ]
+  },
+  {
+    "name": "contact_messages",
+    "fields": [
+      {
+        "name": "id",
+        "type": "text"
+      },
+      {
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "name": "email",
+        "type": "text"
+      },
+      {
+        "name": "topic",
+        "type": "text",
+        "options": [
+          "General",
+          "Wholesale",
+          "Events & Workshops",
+          "Feedback"
+        ]
+      },
+      {
+        "name": "message",
+        "type": "text"
+      },
+      {
+        "name": "submitted_at",
+        "type": "datetime"
+      }
+    ]
+  }
+]

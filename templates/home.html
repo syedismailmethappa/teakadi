@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <section class="hero shell" id="hero-section">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Small-lot tea · Stone-milled matcha</p>
+        <h1 class="hero__title">
+          Brewed slow.<br />
+          Poured <em>bright.</em>
+        </h1>
+        <p class="lede">
+          A modern tea house for people who taste the difference. We source single-estate
+          leaves, mill our own matcha and whisk every bowl to order — then dress it all up
+          in something you'll want to photograph.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="{% url 'menu' %}">
+            <i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Explore the menu
+          </a>
+          <a class="btn btn--ghost" href="#craft">
+            <i class="fa-solid fa-seedling" aria-hidden="true"></i> How we brew
+          </a>
+        </div>
+
+        <dl class="hero__stats">
+          <div>
+            <dt class="stat__label">Single-estate teas</dt>
+            <dd class="stat__value" data-count="24">0</dd>
+          </div>
+          <div>
+            <dt class="stat__label">Bowls whisked daily</dt>
+            <dd class="stat__value" data-count="1200">0</dd>
+          </div>
+          <div>
+            <dt class="stat__label">Guest rating</dt>
+            <dd class="stat__value">4.9<span aria-hidden="true"> ★</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__frame">
+          <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3000?auto=format&fit=crop&w=1600&q=80"
+               alt="Iced matcha latte in a tall glass with creamy milk swirls" width="1600" height="2000" />
+          <div class="hero__badge">
+            <div>
+              <strong>Uji Ceremonial Matcha</strong>
+              <span>Harvested · Spring 2026</span>
+            </div>
+            <i class="fa-solid fa-star" aria-hidden="true" style="color:var(--gold-300)"></i>
+          </div>
+        </div>
+
+        <span class="float-chip float-chip--one">
+          <i class="fa-solid fa-mortar-pestle" aria-hidden="true"></i> Milled to order
+        </span>
+        <span class="float-chip float-chip--two">
+          <i class="fa-solid fa-temperature-half" aria-hidden="true"></i> 78°C water
+        </span>
+        <span class="float-chip float-chip--three">
+          <i class="fa-solid fa-leaf" aria-hidden="true"></i> Zero additives
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Uji matcha</span><span>Ali Shan oolong</span><span>Cold-brew sencha</span>
+      <span>Hand-rolled boba</span><span>Brown sugar</span><span>Yuzu peel</span>
+      <span>Uji matcha</span><span>Ali Shan oolong</span><span>Cold-brew sencha</span>
+      <span>Hand-rolled boba</span><span>Brown sugar</span><span>Yuzu peel</span>
+    </div>
+  </div>
+
+  <section class="section shell" id="featured-section">
+    <div class="section-head reveal">
+      <p class="eyebrow">Guest favourites</p>
+      <h2>The pours people come back for</h2>
+      <p>
+        Six house signatures, pulled straight from today's menu board. Tap add and we'll
+        keep a tray waiting for you at the counter.
+      </p>
+    </div>
+
+    <div class="card-grid" id="featured-grid" style="margin-top:2.4rem"></div>
+
+    <p style="margin-top:2rem">
+      <a class="btn btn--ghost" href="{% url 'menu' %}">
+        See all 22 items <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </p>
+  </section>
+
+  <section class="section shell" id="craft">
+    <div class="split">
+      <div class="media-stack reveal">
+        <img src="https://images.unsplash.com/photo-1564890369478-c89ca4d58400?auto=format&fit=crop&w=1400&q=80"
+             alt="Hot water poured from a pitcher into a ceramic teacup on a tray"
+             loading="lazy" width="1200" height="960" />
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow">Our craft</p>
+        <h2 style="font-size:clamp(1.9rem,4.6vw,3rem);margin:.7rem 0 1rem">
+          Tea treated like produce, not product
+        </h2>
+        <p class="lede">
+          Leaves are picked in narrow windows, rested, and cupped in-house before a single
+          gram makes it onto the board. What doesn't sing doesn't ship.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+            <div>
+              <h3>Single-estate sourcing</h3>
+              <p>Direct from 9 small farms across Uji, Nantou and Yunnan — traceable to the row.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></span>
+            <div>
+              <h3>Timed, never guessed</h3>
+              <p>Every leaf has its own temperature and steep curve dialled in by our tea lead.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-recycle" aria-hidden="true"></i></span>
+            <div>
+              <h3>Low-waste kitchen</h3>
+              <p>Spent leaves become our pastries' flavouring; cups are returnable for a discount.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell section--tight">
+    <div class="section-head reveal">
+      <p class="eyebrow">From leaf to cup</p>
+      <h2>Four steps, zero shortcuts</h2>
+    </div>
+
+    <div class="steps" style="margin-top:2.2rem">
+      <div class="step reveal">
+        <h3>Shade &amp; pick</h3>
+        <p>Matcha fields are shaded for 20 days to build theanine and that deep jade colour.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Stone mill</h3>
+        <p>Granite wheels turn at 30 rpm, yielding just 40g of powder per hour. Slow on purpose.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Whisk</h3>
+        <p>A bamboo chasen lifts the powder into a fine foam — never a blender, never a shortcut.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Pour</h3>
+        <p>Served at 78°C over milk, ice or nothing at all, depending on your mood.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell section--tight">
+    <div class="quote-band glass reveal">
+      <blockquote>
+        “The matcha lemonade is absurdly good — and the room smells like a warm field.”
+      </blockquote>
+      <cite>— Weekly Brew Review</cite>
+    </div>
+  </section>
+
+  <section class="section shell section--tight">
+    <div class="cta-band reveal">
+      <p class="eyebrow" style="justify-content:center">Reserve a tasting flight</p>
+      <h2>Six teas. One hour. Zero rush.</h2>
+      <p>
+        Our guided tasting flight walks you through a green, an oolong, a white, a roasted,
+        a pressed cake and a bowl of ceremonial matcha. Saturdays at 11am and 4pm.
+      </p>
+      <a class="btn btn--primary" href="{% url 'contact' %}">
+        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book a seat
+      </a>
+    </div>
+  </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

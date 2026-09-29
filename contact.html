@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Visit — Kōcha &amp; Co. Tea House</title>
+<meta name="description" content="Visit Kōcha &amp; Co. at 14 Rope Walk Lane, open daily 8am–8pm. Book a tasting flight, ask about wholesale, or send us a note." />
+<meta name="theme-color" content="#04120d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Outfit:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="cg-backdrop" aria-hidden="true">
+  <span class="cg-blob cg-blob--jade"></span>
+  <span class="cg-blob cg-blob--matcha"></span>
+  <span class="cg-blob cg-blob--gold"></span>
+</div>
+<div class="cg-grain" aria-hidden="true"></div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">茶</span>
+      <span class="brand__text">Kōcha &amp; Co.<small>Tea House · Est. 2019</small></span>
+    </a>
+
+    <nav id="primary-nav" class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">Our Craft</a>
+      <a href="contact.html">Visit</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--ghost btn--small" href="menu.html">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Order
+      </a>
+      <button class="cart-btn" type="button" data-cart-open aria-label="Open your tea tray">
+        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+        <span>Tray</span>
+        <span class="cart-btn__count" data-cart-count data-empty="true">0</span>
+      </button>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =========================== PAGE HERO =========================== -->
+  <section class="page-hero shell">
+    <p class="eyebrow">Visit us</p>
+    <h1>Come sit at the counter</h1>
+    <p class="lede">
+      Eight bar stools, one granite mill and a pastry case that empties by mid-afternoon.
+      Walk in, or send a note below and we'll get back to you within a day.
+    </p>
+  </section>
+
+  <!-- ======================== INFO + MAP GRID ======================== -->
+  <section class="shell section--tight">
+    <div class="info-grid">
+      <article class="info-card reveal">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <h3>14 Rope Walk Lane</h3>
+        <p>Old Rope District, between the canal bridge and the flower market.</p>
+      </article>
+      <article class="info-card reveal">
+        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+        <h3>Open daily</h3>
+        <p>8am – 8pm weekdays · 9am – 9pm weekends. Tasting flights at 11am &amp; 4pm.</p>
+      </article>
+      <article class="info-card reveal">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <h3>+1 (555) 014-2200</h3>
+        <p>Call for large orders or to hold a seasonal tea we've just milled.</p>
+      </article>
+      <article class="info-card reveal">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <h3>hello@kocha.co</h3>
+        <p>Wholesale, press and workshop enquiries — Rosa reads the inbox at 6pm.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================== FORM SPLIT =========================== -->
+  <section class="section shell section--tight">
+    <div class="split" style="align-items:start">
+
+      <div class="glass reveal" style="padding:clamp(1.3rem,3vw,2.2rem)">
+        <p class="eyebrow">Say hello</p>
+        <h2 style="font-size:clamp(1.5rem,3.6vw,2.1rem);margin:.6rem 0 1.4rem">
+          Send a note
+        </h2>
+
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" required
+                     autocomplete="name" placeholder="Mina Arakawa" />
+            </div>
+
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" required
+                     autocomplete="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="field field--wide">
+              <label for="cf-topic">What's it about?</label>
+              <select id="cf-topic" name="topic">
+                <option value="General">General enquiry</option>
+                <option value="Wholesale">Wholesale &amp; stockists</option>
+                <option value="Events &amp; Workshops">Tasting flight or workshop</option>
+                <option value="Feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div class="field field--wide">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" required
+                        placeholder="Tell us what you're after — a tasting flight, a wholesale list, or just a tea question…"></textarea>
+              <span class="field-hint">
+                <span id="cf-count">0</span> / 800 characters
+              </span>
+            </div>
+          </div>
+
+          <div class="form-note" id="contact-note" role="status" aria-live="polite"></div>
+
+          <button class="btn btn--primary" type="submit" id="contact-submit" style="margin-top:1.2rem">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send message
+          </button>
+          <p class="field-hint" style="margin-top:.7rem">
+            We only use your details to reply to this message.
+          </p>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="media-stack" style="aspect-ratio:4/3">
+          <img src="https://sspark.genspark.ai/i/7prVbpSHTIDvhz0r?width=1400"
+               alt="Dark timber tea bar with warm pendant lighting and stools"
+               loading="lazy" width="1200" height="900" />
+        </div>
+
+        <div class="feature-list">
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></span>
+            <div>
+              <h3>Tasting flight — $28</h3>
+              <p>Six teas, one hour, guided. Saturdays 11am and 4pm, seats for ten.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i></span>
+            <div>
+              <h3>Whisking workshop — $45</h3>
+              <p>Learn to whisk usucha and koicha properly. Includes your own chasen to take home.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-store" aria-hidden="true"></i></span>
+            <div>
+              <h3>Wholesale</h3>
+              <p>Cafés and restaurants — we supply leaves, matcha and steep cards, minimum 2kg.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================ FAQ ============================ -->
+  <section class="section shell section--tight">
+    <div class="section-head reveal">
+      <p class="eyebrow">Before you ask</p>
+      <h2>Quick answers</h2>
+    </div>
+
+    <div class="feature-list" style="margin-top:2rem">
+      <div class="feature-row reveal">
+        <span class="feature-row__icon"><i class="fa-solid fa-dog" aria-hidden="true"></i></span>
+        <div>
+          <h3>Are dogs allowed?</h3>
+          <p>On the terrace, yes — we keep a water bowl by the door and a puppuccino of oat foam.</p>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row__icon"><i class="fa-solid fa-wifi" aria-hidden="true"></i></span>
+        <div>
+          <h3>Can I work here?</h3>
+          <p>Absolutely, on weekdays before 4pm. We ask for one drink per hour and headphones after 11am.</p>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row__icon"><i class="fa-solid fa-cube" aria-hidden="true"></i></span>
+        <div>
+          <h3>Do you sell retail packs?</h3>
+          <p>Yes — 50g tins of every pure tea, plus 30g matcha tins milled the day you buy them.</p>
+        </div>
+      </div>
+      <div class="feature-row reveal">
+        <span class="feature-row__icon"><i class="fa-solid fa-wheelchair" aria-hidden="true"></i></span>
+        <div>
+          <h3>Is the space accessible?</h3>
+          <p>Step-free entry, an accessible WC, and a lowered section of the bar counter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CTA ============================== -->
+  <section class="section shell section--tight">
+    <div class="cta-band reveal">
+      <p class="eyebrow" style="justify-content:center">See you soon</p>
+      <h2>Bring a friend who thinks they hate tea</h2>
+      <p>We've converted hundreds. Start them on the brown sugar boba and work backwards.</p>
+      <a class="btn btn--primary" href="menu.html">
+        <i class="fa-solid fa-mug-hot" aria-hidden="true"></i> Browse the menu first
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">茶</span>
+          <span class="brand__text">Kōcha &amp; Co.<small>Tea House · Est. 2019</small></span>
+        </a>
+        <p>
+          A modern tea house in the old rope district. Small-lot leaves, stone-milled matcha
+          and a pastry case that changes with the harvest.
+        </p>
+        <div class="socials">
+          <a href="index.html#hero-section" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="index.html#hero-section" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="index.html#hero-section" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+          <a href="contact.html" aria-label="Newsletter"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full menu</a></li>
+          <li><a href="about.html">Our craft</a></li>
+          <li><a href="contact.html">Visit us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="menu.html#Signature%20Lattes">Signature lattes</a></li>
+          <li><a href="menu.html#Milk%20Teas">Milk teas</a></li>
+          <li><a href="menu.html#Pure%20Teas">Pure teas</a></li>
+          <li><a href="menu.html#Bakery%20%26%20Bites">Bakery &amp; bites</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li>14 Rope Walk Lane</li>
+          <li>Open daily · 8am – 8pm</li>
+          <li><a href="tel:+15550142200">+1 (555) 014-2200</a></li>
+          <li><a href="mailto:hello@kocha.co">hello@kocha.co</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span class="js-year">2026</span> Kōcha &amp; Co. All rights reserved.</span>
+      <span>Brewed with care · Prices include service</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= TRAY ============================== -->
+<div class="drawer-scrim" id="drawer-scrim" data-cart-close></div>
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Your tea tray" aria-hidden="true">
+  <div class="drawer__head">
+    <h2>Your tray</h2>
+    <button class="icon-btn" type="button" data-cart-close aria-label="Close tray">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="drawer__body" id="cart-lines"></div>
+  <div class="drawer__foot">
+    <div class="totals">
+      <div><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div><span>Service &amp; tax</span><span id="cart-tax">$0.00</span></div>
+      <div class="totals__grand"><span>Total</span><span id="cart-total">$0.00</span></div>
+    </div>
+    <button class="btn btn--primary btn--block" type="button" id="cart-checkout" disabled>
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Confirm tray
+    </button>
+    <p class="field-hint" style="text-align:center">Orders are collected here and confirmed at the counter.</p>
+  </div>
+</aside>
+
+<script src="js/app.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

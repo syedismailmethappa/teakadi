@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% block title %}Kōcha &amp; Co. — Modern Tea House &amp; Matcha Bar{% endblock %}</title>
+<meta name="description" content="{% block meta_description %}Kōcha &amp; Co. is a modern tea house and matcha bar. Stone-milled matcha, high-mountain oolong, hand-shaken boba and house-baked tea pastries.{% endblock %}" />
+<meta name="theme-color" content="#04120d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Outfit:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="cg-backdrop" aria-hidden="true">
+  <span class="cg-blob cg-blob--jade"></span>
+  <span class="cg-blob cg-blob--matcha"></span>
+  <span class="cg-blob cg-blob--gold"></span>
+</div>
+<div class="cg-grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="{% url 'home' %}">
+      <span class="brand__mark" aria-hidden="true">茶</span>
+      <span class="brand__text">
+        Kōcha &amp; Co.
+        <small>Tea House · Est. 2019</small>
+      </span>
+    </a>
+
+    <nav id="primary-nav" class="nav__links" aria-label="Primary">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'menu' %}">Menu</a>
+      <a href="{% url 'about' %}">Our Craft</a>
+      <a href="{% url 'contact' %}">Visit</a>
+    </nav>
+
+    <div class="nav__actions">
+      {% block nav_action %}
+      <a class="btn btn--ghost btn--small" href="{% url 'menu' %}">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Order
+      </a>
+      {% endblock %}
+      <button class="cart-btn" type="button" data-cart-open aria-label="Open your tea tray">
+        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+        <span>Tray</span>
+        <span class="cart-btn__count" data-cart-count data-empty="true">0</span>
+      </button>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="{% url 'home' %}">
+          <span class="brand__mark" aria-hidden="true">茶</span>
+          <span class="brand__text">Kōcha &amp; Co.<small>Tea House · Est. 2019</small></span>
+        </a>
+        <p>
+          A modern tea house in the old rope district. Small-lot leaves, stone-milled matcha
+          and a pastry case that changes with the harvest.
+        </p>
+        <div class="socials">
+          <a href="{% url 'home' %}#hero-section" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="{% url 'home' %}#hero-section" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="{% url 'home' %}#hero-section" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+          <a href="{% url 'contact' %}" aria-label="Newsletter"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'menu' %}">Full menu</a></li>
+          <li><a href="{% url 'about' %}">Our craft</a></li>
+          <li><a href="{% url 'contact' %}">Visit us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="{% url 'menu' %}#Signature%20Lattes">Signature lattes</a></li>
+          <li><a href="{% url 'menu' %}#Milk%20Teas">Milk teas</a></li>
+          <li><a href="{% url 'menu' %}#Pure%20Teas">Pure teas</a></li>
+          <li><a href="{% url 'menu' %}#Bakery%20%26%20Bites">Bakery &amp; bites</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li>14 Rope Walk Lane</li>
+          <li>Open daily · 8am – 8pm</li>
+          <li><a href="tel:+15550142200">+1 (555) 014-2200</a></li>
+          <li><a href="mailto:hello@kocha.co">hello@kocha.co</a></li>
+          <li><a href="/admin/">Staff dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span class="js-year" id="year">2026</span> Kōcha &amp; Co. All rights reserved.</span>
+      <span>Brewed with care · Prices include service</span>
+    </div>
+  </div>
+</footer>
+
+<div class="drawer-scrim" id="drawer-scrim" data-cart-close></div>
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Your tea tray" aria-hidden="true">
+  <div class="drawer__head">
+    <h2>Your tray</h2>
+    <button class="icon-btn" type="button" data-cart-close aria-label="Close tray">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="drawer__body" id="cart-lines"></div>
+  <div class="drawer__foot">
+    <div class="totals">
+      <div><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div><span>Service &amp; tax</span><span id="cart-tax">$0.00</span></div>
+      <div class="totals__grand"><span>Total</span><span id="cart-total">$0.00</span></div>
+    </div>
+    <button class="btn btn--primary btn--block" type="button" id="cart-checkout" disabled>
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Confirm tray
+    </button>
+    <p class="field-hint" style="text-align:center">
+      Orders are collected here and confirmed at the counter.
+    </p>
+  </div>
+</aside>
+
+<script src="{% static 'js/app.js' %}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

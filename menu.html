@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menu — Kōcha &amp; Co. Tea House</title>
+<meta name="description" content="The full Kōcha &amp; Co. menu: signature matcha lattes, boba milk teas, single-estate pure teas, iced &amp; sparkling brews, house-baked tea pastries and add-ons." />
+<meta name="theme-color" content="#04120d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Outfit:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="cg-backdrop" aria-hidden="true">
+  <span class="cg-blob cg-blob--jade"></span>
+  <span class="cg-blob cg-blob--matcha"></span>
+  <span class="cg-blob cg-blob--gold"></span>
+</div>
+<div class="cg-grain" aria-hidden="true"></div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">茶</span>
+      <span class="brand__text">
+        Kōcha &amp; Co.
+        <small>Tea House · Est. 2019</small>
+      </span>
+    </a>
+
+    <nav id="primary-nav" class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">Our Craft</a>
+      <a href="contact.html">Visit</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--ghost btn--small" href="contact.html">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Find us
+      </a>
+      <button class="cart-btn" type="button" data-cart-open aria-label="Open your tea tray">
+        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+        <span>Tray</span>
+        <span class="cart-btn__count" data-cart-count data-empty="true">0</span>
+      </button>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =========================== PAGE HERO =========================== -->
+  <section class="page-hero shell">
+    <p class="eyebrow">The full board</p>
+    <h1>Every leaf, every pour</h1>
+    <p class="lede">
+      Twenty-two items, all made in-house. Filter by section, search by flavour, or sort
+      by price and caffeine. Add anything to your tray and it'll be waiting at the counter.
+    </p>
+    <p style="margin-top:1.2rem;display:flex;gap:.5rem;flex-wrap:wrap">
+      <span class="pill pill--matcha"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Single-estate leaves</span>
+      <span class="pill pill--matcha"><i class="fa-solid fa-mortar-pestle" aria-hidden="true"></i> Matcha milled in-house</span>
+      <span class="pill pill--gold"><i class="fa-solid fa-wheat-awn" aria-hidden="true"></i> Pastries baked daily</span>
+    </p>
+  </section>
+
+  <!-- ============================ TOOLBAR =========================== -->
+  <section class="shell" aria-label="Menu filters">
+    <div class="menu-toolbar" role="search">
+      <label class="search-field">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="visually-hidden" hidden>Search the menu</span>
+        <input type="search" id="menu-search" placeholder="Search a tea, flavour or tag…"
+               autocomplete="off" aria-label="Search the menu" />
+      </label>
+
+      <div class="filter-chips" id="menu-filters" role="group" aria-label="Filter by section"></div>
+
+      <div class="toolbar-selects">
+        <label>
+          <span hidden>Sort by</span>
+          <select id="menu-sort" aria-label="Sort the menu">
+            <option value="curated">Curated order</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="rating">Top rated</option>
+            <option value="caffeine">Lowest caffeine</option>
+          </select>
+        </label>
+        <label>
+          <span hidden>Caffeine filter</span>
+          <select id="menu-caffeine" aria-label="Filter by caffeine level">
+            <option value="all">Any caffeine</option>
+            <option value="None">Caffeine-free</option>
+            <option value="Low">Low caffeine</option>
+            <option value="Medium">Medium caffeine</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="result-line">
+      <span id="menu-count" aria-live="polite">Loading the menu board…</span>
+      <span id="menu-active-filter">&nbsp;</span>
+    </div>
+
+    <div class="card-grid" id="menu-grid">
+      <!-- filled from the menu_items table -->
+    </div>
+
+    <div id="menu-empty" hidden class="empty-state">
+      <i class="fa-solid fa-mug-saucer" aria-hidden="true"></i>
+      <p><strong>No teas match that combination.</strong></p>
+      <p>Try clearing the search box or switching back to “All sections”.</p>
+      <button class="btn btn--ghost btn--small" type="button" id="menu-reset" style="margin-top:1rem">
+        <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset filters
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================= MENU NOTES =========================== -->
+  <section class="section shell">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">Good to know</p>
+        <h2 style="font-size:clamp(1.7rem,4.2vw,2.6rem);margin:.7rem 0 1rem">
+          Every drink is customisable
+        </h2>
+        <div class="feature-list">
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-cow" aria-hidden="true"></i></span>
+            <div>
+              <h3>Milks</h3>
+              <p>Oat, soy, macadamia or whole milk at no extra charge. Coconut cream +$0.50.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></span>
+            <div>
+              <h3>Sweetness</h3>
+              <p>0%, 25%, 50%, 75% or 100%. Brown sugar syrup or raw honey.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row__icon"><i class="fa-solid fa-snowflake" aria-hidden="true"></i></span>
+            <div>
+              <h3>Temperature</h3>
+              <p>Hot, iced, or blended. Cold brews are steeped 8 hours, never chilled down.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-stack reveal">
+        <img src="https://sspark.genspark.ai/i/5cn0YSXu2PZEHcRO?width=1400"
+             alt="Brown sugar boba milk tea with homemade tapioca pearls"
+             loading="lazy" width="1200" height="960" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CTA ============================== -->
+  <section class="section shell section--tight">
+    <div class="cta-band reveal">
+      <p class="eyebrow" style="justify-content:center">Can't decide?</p>
+      <h2>Let the tea lead pick for you</h2>
+      <p>
+        Tell us what you usually drink and we'll build a flight of three around your taste —
+        no menu knowledge required.
+      </p>
+      <a class="btn btn--primary" href="contact.html">
+        <i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Ask our tea lead
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">茶</span>
+          <span class="brand__text">Kōcha &amp; Co.<small>Tea House · Est. 2019</small></span>
+        </a>
+        <p>
+          A modern tea house in the old rope district. Small-lot leaves, stone-milled matcha
+          and a pastry case that changes with the harvest.
+        </p>
+        <div class="socials">
+          <a href="index.html#hero-section" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="index.html#hero-section" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="index.html#hero-section" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+          <a href="contact.html" aria-label="Newsletter"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full menu</a></li>
+          <li><a href="about.html">Our craft</a></li>
+          <li><a href="contact.html">Visit us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="menu.html#Signature%20Lattes">Signature lattes</a></li>
+          <li><a href="menu.html#Milk%20Teas">Milk teas</a></li>
+          <li><a href="menu.html#Pure%20Teas">Pure teas</a></li>
+          <li><a href="menu.html#Bakery%20%26%20Bites">Bakery &amp; bites</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li>14 Rope Walk Lane</li>
+          <li>Open daily · 8am – 8pm</li>
+          <li><a href="tel:+15550142200">+1 (555) 014-2200</a></li>
+          <li><a href="mailto:hello@kocha.co">hello@kocha.co</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span class="js-year">2026</span> Kōcha &amp; Co. All rights reserved.</span>
+      <span>Brewed with care · Prices include service</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= TRAY ============================== -->
+<div class="drawer-scrim" id="drawer-scrim" data-cart-close></div>
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Your tea tray" aria-hidden="true">
+  <div class="drawer__head">
+    <h2>Your tray</h2>
+    <button class="icon-btn" type="button" data-cart-close aria-label="Close tray">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="drawer__body" id="cart-lines"></div>
+
+  <div class="drawer__foot">
+    <div class="totals">
+      <div><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+      <div><span>Service &amp; tax</span><span id="cart-tax">$0.00</span></div>
+      <div class="totals__grand"><span>Total</span><span id="cart-total">$0.00</span></div>
+    </div>
+    <button class="btn btn--primary btn--block" type="button" id="cart-checkout" disabled>
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Confirm tray
+    </button>
+    <p class="field-hint" style="text-align:center">
+      Orders are collected here and confirmed at the counter.
+    </p>
+  </div>
+</aside>
+
+<script src="js/app.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
